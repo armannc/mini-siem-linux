@@ -8,7 +8,7 @@ from collections import defaultdict
 LOG_FILE = "/var/log/auth.log"
 ATTEMPTS_THRESHOLD = 1
 
-TELEGRAM_TOKEN = ""
+TELEGRAM_TOKEN = "tocen"
 CHAT_ID = "920119538"
 
 ip_counter = defaultdict(int)
@@ -35,7 +35,7 @@ def extract_ip_user(line):
     return ip, user
 
 def follow(file):
-    file.seek(0, 2)  # перейти в конец файла
+    file.seek(0, 2)  
     while True:
         line = file.readline()
         if not line:
@@ -76,4 +76,5 @@ def main():
                 })
 
 if __name__ == "__main__":
+
     main()
